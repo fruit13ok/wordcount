@@ -1,0 +1,39 @@
+// to begin this project
+
+// wordcount count show each word and number of time they appear for the given page
+
+mkdir wordcount
+cd wordcount
+code .
+npm init -y
+npm install express puppeteer body-parser node-fetch cors --save
+npm install nodemon --save-dev
+
+// in package.json
+    "start-dev": "nodemon server"
+
+// create basic back end and front end directories and files
+mkdir server
+touch server/index.js
+mkdir public
+touch public/app.js public/index.html
+
+// 
+test basic GET POST code 
+
+// run the server
+npm run start-dev
+
+
+// Without front end is ok, this is a back end only project that produce JSON result,
+// This front end got redirected the path is for testing, everything can be test with Postman.
+
+
+// in app.js
+let backendRoute = new URL("http://localhost:8000/api");
+
+
+// in index.js
+
+
+// github repo
