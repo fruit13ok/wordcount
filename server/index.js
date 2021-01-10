@@ -49,10 +49,10 @@ let wordCountObj = (arrStrs) => {
     });
     for (var pro in wordObj) {
         totalCount += wordObj[pro];
-        arrObjs.push({'key': pro, 'count': wordObj[pro]});
+        arrObjs.push({'searchKey': pro, 'count': wordObj[pro]});
     }
     arrObjs.sort((a,b)=>{
-        // return (a.key > b.key ? 1 : -1);
+        // return (a.searchKey > b.searchKey ? 1 : -1);
         return (a.count < b.count ? 1 : -1);
     });
     arrObjs.forEach((obj)=>{
@@ -123,7 +123,7 @@ let scrape = async (targetPage) => {
     }, 'body');
     // console.log(str);
     // break word like "HelloWorld" to "Hello World"
-    let formatedStr = str.replace(/([A-Z]\w)/g, ' $1').trim();
+    let formatedStr = str.replace(/([a-z0-9])([A-Z][a-z0-9])/g, '$1 $2').trim();
     // console.log(formatedStr);
     // split string to array by space
     let strArr = formatedStr.split(/\s/);
