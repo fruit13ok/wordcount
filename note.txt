@@ -1,6 +1,6 @@
 // to begin this project
 
-// wordcount count show each word and number of time they appear for the given page
+// wordcount show each word and number of time they appear for the given page
 
 mkdir wordcount
 cd wordcount
@@ -37,3 +37,10 @@ let backendRoute = new URL("http://localhost:8000/api");
 
 
 // github repo
+echo "# wordcount" >> README.md
+git init
+git add .
+git commit -m 'show each word and number of time they appear for the given page'
+git branch -M main
+git remote add origin https://github.com/fruit13ok/wordcount.git
+git push -u origin main
